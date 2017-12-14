@@ -4,6 +4,7 @@
 !.gitignore
 # Directories
 ###################
+node_modules/
 CVS/
 target/
 build/
