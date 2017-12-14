@@ -1,0 +1,12 @@
+# This is for development container
+
+version: "3"
+services:
+  node:
+    build: .
+    env_file:
+      # ESHOP_ENV is the env var in local shell, the value will be dev, uat or pro
+      # $(ESHOP_ENV).env is the file which defined all env vars for the container
+      - ./envfiles/dev.env
+    volumes:
+      - ".:/code"

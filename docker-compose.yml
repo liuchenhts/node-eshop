@@ -1,0 +1,22 @@
+# This is the base compose file for all containers
+# docker-compose run --rm --service-ports node bash
+# the above command will start a container for this one-off python-django development env in a bash shell
+# django-admin.py startproject eshop . , run this command in the bash to create a django project skeleton
+# environment variables is defined in .env file or the local env
+# docker-compose up -d, to start the server
+
+version: "3"
+services:
+  node:
+    image: "liuchen/node_eshop"
+    volumes:
+      - "/var:/var"
+    ports:
+      - "8081:8081"
+    command: node index.js
+networks:
+  default:
+    external:
+      # make sure the external network is created in advance using below command
+      # docker network create --driver bridge development
+      name: development
