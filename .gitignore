@@ -2,6 +2,7 @@
 ###################
 .*
 !.gitignore
+pro.env
 # Directories
 ###################
 node_modules/
