@@ -1,0 +1,157 @@
+body {
+	background-color: #F8F8F8;
+	font-family: "Microsoft YaHei" ! important;
+	font-style: normal;
+	font-weight: 400;
+}
+
+.body {
+	position: relative;
+	overflow-x: hidden;
+	min-height: 800px;
+	margin-top: 100px;
+	padding: 0px 30px 0px 30px;
+}
+
+.logo {
+	float: left;
+	margin-right: 13px;
+	margin-top: 9px;
+}
+
+.navbar-brand {
+	margin-top: 12px;
+}
+
+.header-button {
+	margin-top: 9px;
+}
+
+.dui-header {
+	padding: 0 30px;
+}
+
+
+
+/*new UI design*/
+
+.navbar-inverse {
+	background-color: white;
+	border: 0px;
+	box-shadow: 0px 0px 10px grey;
+}
+
+.navbar-inverse .navbar-toggle {
+    background-color: #333;
+}
+
+.navbar-header .logo {
+	margin-top: 8px;
+	margin-bottom: 8px;
+	display: inline;
+}
+
+a.logo img {
+	width: 60px;
+}
+
+nav.dui-header.navbar.navbar-inverse.navbar-fixed-top a {
+	font-size: 20px;
+	color: #484848;
+	transition: ease color 0.8s;
+}
+
+nav.dui-header.navbar.navbar-inverse.navbar-fixed-top li a {
+	font-size: 16px;
+	margin-top: 17px;
+}
+
+nav.dui-header.navbar.navbar-inverse.navbar-fixed-top a:hover {
+	color: #ff5818;
+}
+
+.navbar-inverse .navbar-nav>.open>a, .navbar-inverse .navbar-nav>.open>a:focus,
+	.navbar-inverse .navbar-nav>.open>a:hover {
+	background-color: white;
+}
+
+.nav>li>a {
+	padding: 10px 10px;
+}
+
+ul.nav.navbar-nav.navbar-right li a.userLink:before {
+	content: "\f007";
+	font-family: fontawesome;
+	padding-right: 10px;
+	color: #ff5818;
+}
+
+ul.nav.navbar-nav.navbar-right li a.registerLink:before {
+	content: "\f040";
+	font-family: fontawesome;
+	padding-right: 10px;
+	color: #268dbf;
+}
+
+
+.footer {
+	margin: 30px 0px 0px 0px;
+}
+
+.footer-top {
+	background: #434343;
+	color: white;
+    padding-bottom: 30px;
+    text-align: center;
+}
+
+.footer-row {
+	margin-top: 30px !important;
+}
+
+.footer-row ul li {
+    display: inline-block;
+    list-style: none;
+    padding: 0 1em;
+    border-right: 1px solid #fff;
+}
+
+.footer-row ul li.last {
+    border-right: 0px solid #fff;
+}
+
+.footer-row ul li a {
+    color: #fff;
+    line-height: 1.2;
+}
+
+.footer span {
+    font-size: 15px;
+    margin-left: 20px;
+}
+
+.footer span.footer-row-title {
+    font-size: 20px;
+}
+
+.footer-img {
+    margin-left: 20px;
+	width: 90;
+	height:25;
+}
+
+.footer-bottom {
+    text-align: center;
+    font-size: 16px;
+    color: white;
+    background: black;
+    padding: 10px 20px;
+}
+
+
+.product {
+	border: 1px solid orange;
+	min-height: 200px;
+  margin: 5px;
+  padding:5px;
+}
