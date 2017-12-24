@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+    <% include ../layout/head %>
+
+    <body>
+
+        <% include ../layout/header %>
+
+      	<div class="body">
+      		<div class="row">
+            <ul>
+              <li><%= product._id %></li>
+              <li><%= product.name %></li>
+              <li><%= product.price %></li>
+            </ul>
+      		</div>
+      	</div>
+
+        <% include ../layout/footer %>
+
+    </body>
+</html>

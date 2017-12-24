@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+    <% include ../layout/head %>
+
+    <body>
+
+        <% include ../layout/header %>
+
+      	<div class="body">
+      		<div class="row">
+
+            <% if (products.length > 0) { %>
+
+              <script>
+                $(document).ready(function() {
+
+                  $('a.deleteLink').click(function() {
+                    swal({
+                      title : 'Confirm',
+                      text : "Are you sue to delete?",
+                      type : 'warning',
+                      showCancelButton : true,
+                      confirmButtonColor : '#3085d6',
+                      cancelButtonColor : '#d33',
+                      confirmButtonText : 'Yes',
+                      cancelButtonText : 'Cancel'
+                    }, function() {
+                        alert('hi');
+                    });
+                  });
+
+                });
+
+                function deleteProduct(productId){
+
+                  var action = "/products/" + productId + "/delete";
+
+                  var form = $("#deleteProductForm");
+
+                  form.attr("action", action);
+                  form.submit();
+
+                  // fetch('/products/'+productId, {
+                  //   method: 'delete',
+                  //   headers: {
+                  //     'Content-Type': 'application/json'
+                  //   },
+                  //   body: JSON.stringify({
+                  //     'name': 'Darth Vader'
+                  //   })
+                  // })
+                  // .then(res => {
+                  //   if (res.ok) return res.json()
+                  // }).
+                  // then(data => {
+                  //   console.log(data)
+                  //   window.location.reload()
+                  // })
+                }
+              </script>
+
+              <form id="deleteProductForm" method="POST">
+              </form>
+
+
+               <% for(var i=0; i<products.length; i++) { %>
+                 <div class="col-lg-4">
+                   <div class="product">
+                     <div class="top">
+                       <p><a href="/products/<%=products[i]._id %>"><%= products[i].name %></a></p>
+                       <div>
+                         <p>$AUD <%= products[i].price %></p>
+                       </div>
+                     </div>
+                     <div class="bottom">
+
+                        <a href="/products/<%=products[i]._id %>/update">update</a>
+
+                         <input class="btn btn-danger center-block pull-right "
+                                     type="button" data-toggle="modal"
+                                     data-target="#confirm-delete_<%= products[i]._id %>" value="Delete Product" />
+
+
+                         <div class="modal fade" id="confirm-delete_<%= products[i]._id %>"
+                           tabindex="-1" role="dialog"
+                           aria-labelledby="myModalLabel" aria-hidden="true">
+                           <div class="modal-dialog">
+                             <div class="modal-content">
+                               <div class="modal-header">
+                                 <b style="color: red">Confirm</b>
+                               </div>
+                               <div class="modal-body">Are you sure to delete the product?</div>
+                               <div class="modal-footer">
+                                 <button type="button" class="btn btn-default"
+                                   data-dismiss="modal">Cancel</button>
+                                 <a class="btn btn-danger btn-ok"
+                                   onclick="deleteProduct('<%= products[i]._id %>')">Yes</a>
+                               </div>
+                             </div>
+                           </div>
+                         </div>
+                     </div>
+                   </div>
+                 </div>
+               <% } %>
+
+            <% } %>
+
+      		</div>
+      	</div>
+
+        <% include ../layout/footer %>
+
+    </body>
+</html>
