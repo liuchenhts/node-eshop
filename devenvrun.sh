@@ -1,4 +1,4 @@
-docker-compose up -d
+docker-compose up
 # then docker-compose exec node bash, to get the shell
 
 # alternative
